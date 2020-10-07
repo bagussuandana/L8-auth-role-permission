@@ -5,7 +5,7 @@
 <body class="bg-gray-200">
     <x-navbar> 
     </x-navbar>
-    <div class="container mx-auto mt-5">
+    <div class="container mx-auto pt-20">
         @yield('content')
     </div>
 </body>
