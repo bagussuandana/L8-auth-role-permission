@@ -1,10 +1,11 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\layouts;
 
 use Illuminate\View\Component;
+use Spatie\Permission\Models\Role as ModelsRole;
 
-class navbar extends Component
+class navigation extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +24,7 @@ class navbar extends Component
      */
     public function render()
     {
-        return view('components.navbar');
+        $roles = ModelsRole::get();
+        return view('components.layouts.navigation', compact('roles'));
     }
 }
